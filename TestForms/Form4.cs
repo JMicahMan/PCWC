@@ -29,7 +29,7 @@ namespace TestForms
             comboBox1.Text = "None";
             String[] Ata = File.ReadAllLines("Opo.txt");
             foreach (var line in Ata)
-            {
+            {    
                 string[] stuff = line.Split(',');
                 comboBox1.Items.Add(stuff[0]);
             }
