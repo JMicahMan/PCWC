@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Windows.Controls.Primitives;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,14 +15,23 @@ using Newtonsoft.Json;
 
 namespace TestForms
 {
+    public class MyClassEvent
+    {
+        public static void OnClick(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button mybotton = sender as System.Windows.Forms.Button;
+            Form myform = mybotton.Parent as Form;
+        }
+
+    }
     public partial class Form2 : Form
     {
-        public static string SetValueForRifle = " ";
-        public static string SetValueForRifle2 = " ";
-        public static string SetValueForRifle3 = " ";
-        public static string SetValueForRifle4 = " ";
-        public static string SetValueForRifle5 = " ";
-        public static string SetValueForRifle6 = " ";
+        public static string SetValueForRifle = " \n";
+        public static string SetValueForRifle2 = " \n";
+        public static string SetValueForRifle3 = " \n";
+        public static string SetValueForRifle4 = " \n";
+        public static string SetValueForRifle5 = " \n";
+        public static string SetValueForRifle6 = " \n";
 
         public Form2(Form1 form1)
         {
@@ -113,71 +123,63 @@ namespace TestForms
                 }
                 SetValueForRifle5 = comboBox1.Text;
 
+                void button1_Click(object sender, EventArgs e)
+                {
+                    button1.Click += MyClassEvent.OnClick;
+                    if (form1.AssRif == true)
+                    {
+                        SetValueForRifle = comboBox1.Text;
+                        Hide();
+                        Form3 form3 = new Form3();
+                        form3.Show();
+                    }
+                    if (form1.BatRif == true)
+                    {
+                        SetValueForRifle2 = comboBox1.Text;
+                        Hide();
+                        Form3 form3 = new Form3();
+                        form3.Show();
+
+                    }
+                    if (form1.SubGun == true)
+                    {
+                        SetValueForRifle3 = comboBox1.Text;
+                        Hide();
+                        Form3 form3 = new Form3();
+                        form3.Show();
+
+                    }
+                    if (form1.MacGun == true)
+                    {
+                        SetValueForRifle4 = comboBox1.Text;
+                        Hide();
+                        Form3 form3 = new Form3();
+                        form3.Show();
+
+                    }
+                    if (form1.Shotty == true)
+                    {
+                        SetValueForRifle5 = comboBox1.Text;
+                        Hide();
+                        Form3 form3 = new Form3();
+                        form3.Show();
+
+                    }
+                    if (form1.SniRif == true)
+                    {
+                        SetValueForRifle6 = comboBox1.Text;
+                                                Hide();
+                        Form3 form3 = new Form3();
+                        form3.Show();
+
+                    }
+
+                }
+
 
             }
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //if (comboBox1.Text == SetValueForRifle)
-            //{
-            //    SetValueForRifle = comboBox1.Text;
-            //    Hide();
-            //    Form3 form3 = new Form3();
-            //    form3.Show();
-            //}
-
-            //if (comboBox1.Text == SetValueForRifle2)
-            //{
-            //    SetValueForRifle2 = comboBox1.Text;
-            //    Hide();
-            //    Form3 form3 = new Form3();
-            //    form3.Show();
-            //}
-
-            //if (comboBox1.Text == SetValueForRifle3)
-            //{
-            //    SetValueForRifle3 = comboBox1.Text;
-            //    Hide();
-            //    Form3 form3 = new Form3();
-            //    form3.Show();
-            //}
-
-            //if (comboBox1.Text == SetValueForRifle4)
-            //{
-            //    SetValueForRifle4 = comboBox1.Text;
-            //    Hide();
-            //    Form3 form3 = new Form3();
-            //    form3.Show();
-            //}
-
-            //if (comboBox1.Text == SetValueForRifle5)
-            //{
-            //    SetValueForRifle5 = comboBox1.Text;
-            //    Hide();
-            //    Form3 form3 = new Form3();
-            //    form3.Show();
-            //}
-
-            //if (comboBox1.Text == SetValueForRifle6)
-            //{
-            //    SetValueForRifle6 = comboBox1.Text;
-            //    Hide();
-            //    Form3 form3 = new Form3();
-            //    form3.Show();
-            //}
-
-            SetValueForRifle = comboBox1.Text;
-            SetValueForRifle2 = comboBox1.Text;
-            SetValueForRifle3 = comboBox1.Text;
-            SetValueForRifle4 = comboBox1.Text;
-            SetValueForRifle5 = comboBox1.Text;
-            SetValueForRifle6 = comboBox1.Text;
-
-            Hide();
-            Form3 form3 = new Form3();
-            form3.Show();
-        }
     }
 }

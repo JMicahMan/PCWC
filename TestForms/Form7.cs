@@ -34,28 +34,28 @@ namespace TestForms
                 comboBox1.Items.Add(stuff[0]);
             }
 
-            comboBox1.Text = "Standard";
+            comboBox2.Text = "Standard";
             String[] PMod2 = File.ReadAllLines("Trig.txt");
-            foreach (var line in PMod)
+            foreach (var line in PMod2)
             {
                 string[] stuff = line.Split(',');
                 comboBox2.Items.Add(stuff[0]);
             }
 
-            comboBox1.Text = "Standard";
+            comboBox3.Text = "Standard";
             String[] PMod3 = File.ReadAllLines("Slid.txt");
-            foreach (var line in PMod)
+            foreach (var line in PMod3)
             {
                 string[] stuff = line.Split(',');
-                comboBox1.Items.Add(stuff[0]);
+                comboBox3.Items.Add(stuff[0]);
             }
 
-            comboBox1.Text = "Standard";
+            comboBox4.Text = "Standard";
             String[] PMod4 = File.ReadAllLines("Frm.txt");
-            foreach (var line in PMod)
+            foreach (var line in PMod4)
             {
                 string[] stuff = line.Split(',');
-                comboBox1.Items.Add(stuff[0]);
+                comboBox4.Items.Add(stuff[0]);
             }
 
 
@@ -68,7 +68,9 @@ namespace TestForms
             SetValueForRifle3 = comboBox3.Text;
             SetValueForRifle4 = comboBox4.Text;
 
-            
+            Hide();
+            Form8 form8 = new Form8();
+            form8.Show();
             
         }
     }
