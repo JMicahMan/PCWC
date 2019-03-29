@@ -49,6 +49,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Load";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -75,42 +76,42 @@
             // assaultRiflesToolStripMenuItem
             // 
             this.assaultRiflesToolStripMenuItem.Name = "assaultRiflesToolStripMenuItem";
-            this.assaultRiflesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.assaultRiflesToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.assaultRiflesToolStripMenuItem.Text = "Assault Rifles";
             this.assaultRiflesToolStripMenuItem.Click += new System.EventHandler(this.assaultRiflesToolStripMenuItem_Click);
             // 
             // battleRiflesToolStripMenuItem
             // 
             this.battleRiflesToolStripMenuItem.Name = "battleRiflesToolStripMenuItem";
-            this.battleRiflesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.battleRiflesToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.battleRiflesToolStripMenuItem.Text = "Battle Rifles";
             this.battleRiflesToolStripMenuItem.Click += new System.EventHandler(this.battleRiflesToolStripMenuItem_Click);
             // 
             // sMGsToolStripMenuItem
             // 
             this.sMGsToolStripMenuItem.Name = "sMGsToolStripMenuItem";
-            this.sMGsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sMGsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.sMGsToolStripMenuItem.Text = "SMGs";
             this.sMGsToolStripMenuItem.Click += new System.EventHandler(this.sMGsToolStripMenuItem_Click);
             // 
             // lMGsGPMGsToolStripMenuItem
             // 
             this.lMGsGPMGsToolStripMenuItem.Name = "lMGsGPMGsToolStripMenuItem";
-            this.lMGsGPMGsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lMGsGPMGsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.lMGsGPMGsToolStripMenuItem.Text = "LMGs/GPMGs";
             this.lMGsGPMGsToolStripMenuItem.Click += new System.EventHandler(this.lMGsGPMGsToolStripMenuItem_Click);
             // 
             // shotgunsToolStripMenuItem
             // 
             this.shotgunsToolStripMenuItem.Name = "shotgunsToolStripMenuItem";
-            this.shotgunsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.shotgunsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.shotgunsToolStripMenuItem.Text = "Shotguns";
             this.shotgunsToolStripMenuItem.Click += new System.EventHandler(this.shotgunsToolStripMenuItem_Click);
             // 
             // sniperRiflesToolStripMenuItem
             // 
             this.sniperRiflesToolStripMenuItem.Name = "sniperRiflesToolStripMenuItem";
-            this.sniperRiflesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sniperRiflesToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.sniperRiflesToolStripMenuItem.Text = "Sniper Rifles";
             this.sniperRiflesToolStripMenuItem.Click += new System.EventHandler(this.sniperRiflesToolStripMenuItem_Click);
             // 

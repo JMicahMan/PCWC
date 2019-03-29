@@ -16,8 +16,11 @@ namespace TestForms
 {
     public partial class Form6 : Form
     {
-        public static string SetValueForRifle = " ";
-        public static string SetValueForRifle2 = " ";
+        public static string SetValueForRifle = " \n";
+        public static string SetValueForRifle2 = " \n";
+
+        public bool AutoLoader2 = false;
+        public bool SixGun2 = false;
 
         public Form6(Form5 form5)
         {
@@ -25,6 +28,7 @@ namespace TestForms
 
             if (form5.AutoLoader == true)
             {
+                AutoLoader2 = true;
                 comboBox1.Text = "1911 : .45 ACP";
 
                 String[] guns = File.ReadAllLines("Autis.txt");
@@ -37,6 +41,7 @@ namespace TestForms
 
             if (form5.SixGun == true)
             {
+                SixGun2 = true;
                 comboBox1.Text = "S&W 10 : .38 Spc.";
 
                 String[] guns = File.ReadAllLines("Sixers.txt");
@@ -53,14 +58,26 @@ namespace TestForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SetValueForRifle = comboBox1.Text;
-            SetValueForRifle2 = comboBox1.Text;
+            if (AutoLoader2 == true)
+            {
+                SetValueForRifle = comboBox1.Text;
+                Hide();
+                Form7 form7 = new Form7();
+                form7.Show();
 
-            Hide();
-            Form7 form7 = new Form7();
-            form7.Show();
-        
-            
+            }
+
+            if (SixGun2 == true)
+            {
+                SetValueForRifle2 = comboBox1.Text;
+                Hide();
+                Form7 form7 = new Form7();
+                form7.Show();
+
+            }
+
+
+
         }
     }
 }

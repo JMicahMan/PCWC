@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace TestForms
 {
@@ -77,6 +78,35 @@ namespace TestForms
             Hide();
             Form2 form2 = new Form2(this);
             form2.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+
+            Stream stream = null;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Json files| *.json";
+            openFileDialog.InitialDirectory = @"C:\";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((stream = openFileDialog.OpenFile()) != null)
+                    {
+                        using (stream)
+                        {
+                            
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Can't read file" + ex.Message);
+                }
+            }
         }
     }
 }

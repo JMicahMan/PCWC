@@ -17,7 +17,7 @@ namespace TestForms
 {
     public partial class Form8 : Form
     {
-
+        public bool ANewGun = false;
         public static string SetValueForRifle = " ";
         public static string SetValueForRifle2 = " ";
 
@@ -49,8 +49,10 @@ namespace TestForms
             SetValueForRifle = comboBox1.Text;
             SetValueForRifle2 = comboBox2.Text;
 
+            ANewGun = true;
+
             Hide();
-            Form9 form9 = new Form9();
+            Form9 form9 = new Form9(this);
             form9.Show();
         }
     }

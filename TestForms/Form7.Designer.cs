@@ -42,76 +42,85 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(304, 243);
+            this.label1.Location = new System.Drawing.Point(152, 126);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "Barrel";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(304, 298);
+            this.label2.Location = new System.Drawing.Point(152, 155);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 25);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.label2.Text = "Trigger";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(304, 364);
+            this.label3.Location = new System.Drawing.Point(152, 189);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 25);
+            this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.label3.Text = "Slide";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(304, 422);
+            this.label4.Location = new System.Drawing.Point(152, 219);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 25);
+            this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.label4.Text = "Frame";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(398, 240);
+            this.comboBox1.Location = new System.Drawing.Point(199, 125);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(244, 33);
+            this.comboBox1.Size = new System.Drawing.Size(124, 21);
             this.comboBox1.TabIndex = 4;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(398, 295);
+            this.comboBox2.Location = new System.Drawing.Point(199, 153);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(244, 33);
+            this.comboBox2.Size = new System.Drawing.Size(124, 21);
             this.comboBox2.TabIndex = 5;
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(398, 364);
+            this.comboBox3.Location = new System.Drawing.Point(199, 189);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(244, 33);
+            this.comboBox3.Size = new System.Drawing.Size(124, 21);
             this.comboBox3.TabIndex = 6;
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(398, 422);
+            this.comboBox4.Location = new System.Drawing.Point(199, 219);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(244, 33);
+            this.comboBox4.Size = new System.Drawing.Size(124, 21);
             this.comboBox4.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1408, 871);
+            this.button1.Location = new System.Drawing.Point(704, 453);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 42);
+            this.button1.Size = new System.Drawing.Size(76, 22);
             this.button1.TabIndex = 8;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
@@ -119,9 +128,9 @@
             // 
             // Form7
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1573, 925);
+            this.ClientSize = new System.Drawing.Size(786, 481);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
@@ -131,6 +140,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form7";
             this.Text = "Form7";
             this.ResumeLayout(false);

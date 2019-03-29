@@ -80,10 +80,10 @@ namespace TestForms
         public void button1_Click(object sender, EventArgs e)
         {
             SetValueForRifle = comboBox1.Text;
-            SetValueForRifle = comboBox2.Text;
-            SetValueForRifle = comboBox3.Text;
-            SetValueForRifle = comboBox4.Text;
-            SetValueForRifle = comboBox5.Text;
+            SetValueForRifle2 = comboBox2.Text;
+            SetValueForRifle3 = comboBox3.Text;
+            SetValueForRifle4 = comboBox4.Text;
+            SetValueForRifle5 = comboBox5.Text;
 
             Hide();
             Form4 form4 = new Form4();

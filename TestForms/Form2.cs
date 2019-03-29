@@ -15,30 +15,38 @@ using Newtonsoft.Json;
 
 namespace TestForms
 {
-    public class MyClassEvent
-    {
-        public static void OnClick(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Button mybotton = sender as System.Windows.Forms.Button;
-            Form myform = mybotton.Parent as Form;
-        }
-
-    }
     public partial class Form2 : Form
     {
-        public static string SetValueForRifle = " \n";
-        public static string SetValueForRifle2 = " \n";
-        public static string SetValueForRifle3 = " \n";
-        public static string SetValueForRifle4 = " \n";
-        public static string SetValueForRifle5 = " \n";
-        public static string SetValueForRifle6 = " \n";
+        public static string SetValueForRifle = " ";
+        public static string SetValueForRifle2 = " ";
+        public static string SetValueForRifle3 = " ";
+        public static string SetValueForRifle4 = " ";
+        public static string SetValueForRifle5 = " ";
+        public static string SetValueForRifle6 = " ";
+
+        
+
+
+    
+
+
+        public bool AssRif2 = false;
+        public bool BatRif2 = false;
+        public bool SubGun2 = false;
+        public bool MacGun2 = false;
+        public bool Shotty2 = false;
+        public bool SniRif2 = false;
 
         public Form2(Form1 form1)
         {
             InitializeComponent();
 
+
+
             if (form1.AssRif == true)
             {
+                
+                AssRif2 = true;
                 comboBox1.Text = "M16 : 5.56x45mm";
 
                 String[] guns = File.ReadAllLines("AsultRifl.txt");
@@ -52,6 +60,7 @@ namespace TestForms
 
             if (form1.BatRif == true)
             {
+                BatRif2 = true;
                 comboBox1.Text = "FAL : 7.62x51mm";
 
                 String[] guns = File.ReadAllLines("BattRifl.txt");
@@ -67,6 +76,7 @@ namespace TestForms
 
             if (form1.SubGun == true)
             {
+                SubGun2 = true;
                 comboBox1.Text = "Uzi : 9x19mm";
 
                 String[] guns = File.ReadAllLines("Subby.txt");
@@ -82,6 +92,7 @@ namespace TestForms
 
             if (form1.MacGun == true)
             {
+                MacGun2 = true;
                 comboBox1.Text = "M60 : 7.62x51mm";
 
                 String[] guns = File.ReadAllLines("Maschinengewehr.txt");
@@ -97,6 +108,7 @@ namespace TestForms
 
             if (form1.Shotty == true)
             {
+                Shotty2 = true;
                 comboBox1.Text = "Mossberg 500 : 12 Gauge";
 
                 String[] guns = File.ReadAllLines("Shotg.txt");
@@ -113,6 +125,7 @@ namespace TestForms
 
             if (form1.SniRif == true)
             {
+                SniRif2 = true;
                 comboBox1.Text = "Remington 700 : 7.62x51mm";
 
                 String[] guns = File.ReadAllLines("ELR.txt");
@@ -123,63 +136,66 @@ namespace TestForms
                 }
                 SetValueForRifle5 = comboBox1.Text;
 
-                void button1_Click(object sender, EventArgs e)
-                {
-                    button1.Click += MyClassEvent.OnClick;
-                    if (form1.AssRif == true)
-                    {
-                        SetValueForRifle = comboBox1.Text;
-                        Hide();
-                        Form3 form3 = new Form3();
-                        form3.Show();
-                    }
-                    if (form1.BatRif == true)
-                    {
-                        SetValueForRifle2 = comboBox1.Text;
-                        Hide();
-                        Form3 form3 = new Form3();
-                        form3.Show();
-
-                    }
-                    if (form1.SubGun == true)
-                    {
-                        SetValueForRifle3 = comboBox1.Text;
-                        Hide();
-                        Form3 form3 = new Form3();
-                        form3.Show();
-
-                    }
-                    if (form1.MacGun == true)
-                    {
-                        SetValueForRifle4 = comboBox1.Text;
-                        Hide();
-                        Form3 form3 = new Form3();
-                        form3.Show();
-
-                    }
-                    if (form1.Shotty == true)
-                    {
-                        SetValueForRifle5 = comboBox1.Text;
-                        Hide();
-                        Form3 form3 = new Form3();
-                        form3.Show();
-
-                    }
-                    if (form1.SniRif == true)
-                    {
-                        SetValueForRifle6 = comboBox1.Text;
-                                                Hide();
-                        Form3 form3 = new Form3();
-                        form3.Show();
-
-                    }
-
-                }
 
 
             }
 
+
+
         }
+
+        public void button1_Click(object sender, EventArgs e)
+        {
+            if (AssRif2 == true)
+            {
+                SetValueForRifle = comboBox1.Text;
+                Hide();
+                Form3 form3 = new Form3();
+                form3.Show();
+            }
+            if (BatRif2 == true)
+            {
+                SetValueForRifle2 = comboBox1.Text;
+                Hide();
+                Form3 form3 = new Form3();
+                form3.Show();
+
+            }
+            if (SubGun2 == true)
+            {
+                SetValueForRifle3 = comboBox1.Text;
+                Hide();
+                Form3 form3 = new Form3();
+                form3.Show();
+
+            }
+            if (MacGun2 == true)
+            {
+                SetValueForRifle4 = comboBox1.Text;
+                Hide();
+                Form3 form3 = new Form3();
+                form3.Show();
+
+            }
+            if (Shotty2 == true)
+            {
+                SetValueForRifle5 = comboBox1.Text;
+                Hide();
+                Form3 form3 = new Form3();
+                form3.Show();
+
+            }
+            if (SniRif2 == true)
+            {
+                SetValueForRifle6 = comboBox1.Text;
+                Hide();
+                Form3 form3 = new Form3();
+                form3.Show();
+
+            }
+
+        }
+
 
     }
 }
