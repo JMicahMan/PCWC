@@ -17,13 +17,15 @@ namespace TestForms
 {
     public partial class Form8 : Form
     {
-        public bool ANewGun = false;
+        //public bool ANewGun = false;
         public static string SetValueForRifle = " ";
         public static string SetValueForRifle2 = " ";
-
+        public bool aNewGun;
         public Form8()
         {
             InitializeComponent();
+
+            aNewGun = false;
 
             comboBox1.Text = "None";
             String[] pAta = File.ReadAllLines("Muzlo.txt");
@@ -44,15 +46,15 @@ namespace TestForms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
+            aNewGun = true;
             SetValueForRifle = comboBox1.Text;
             SetValueForRifle2 = comboBox2.Text;
-
-            ANewGun = true;
+            Form1 form1 = new Form1();
 
             Hide();
-            Form9 form9 = new Form9(this);
+            Form9 form9 = new Form9(form1);
             form9.Show();
         }
     }

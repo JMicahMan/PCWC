@@ -22,9 +22,13 @@ namespace TestForms
         public bool SniRif = false;
 
 
+        public bool OldGun;
+
         public Form1()
         {
             InitializeComponent();
+            OldGun = false;
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -80,33 +84,19 @@ namespace TestForms
             form2.Show();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
+            OldGun = true;
+            Hide();
+            Form9 form9 = new Form9(this);
+            form9.Show();
+
+            //var dialog = new OpenFileDialog();
+           // dialog.ShowDialog();
 
 
 
-            Stream stream = null;
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Json files| *.json";
-            openFileDialog.InitialDirectory = @"C:\";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    if ((stream = openFileDialog.OpenFile()) != null)
-                    {
-                        using (stream)
-                        {
-                            
-                        }
-                    }
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Can't read file" + ex.Message);
-                }
-            }
         }
     }
 }
