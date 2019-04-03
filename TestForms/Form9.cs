@@ -9,18 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json;
+using System.Runtime;
+using System.Net;
+
+
 
 namespace TestForms
 {
     public partial class Form9 : Form
     {
 
+
         public Form9(Form1 form1)
         {
 
             InitializeComponent();
 
-        
+            
 
             if (form1.OldGun == false)
             {
@@ -125,148 +130,356 @@ namespace TestForms
 
             else if (form1.OldGun == true)
             {
-                label1.Text = File.ReadAllText(@"AR.json");
+               
+
+                label1.Text = File.ReadAllText(@"AR.txt");
+
+                label1.Text = label1.Text.Replace("{", "");
+                label1.Text = label1.Text.Replace("}", "");
+                label1.Text = label1.Text.Replace("Name", "");
+                label1.Text = label1.Text.Replace(":", "");
+                label1.Text = label1.Text.Replace(",", "");
+                label1.Text = label1.Text.Replace("_", "");
+                label1.Text = label1.Text.Replace(@"""", "");
+
                 label18.Text = File.ReadAllText(@"BR.json");
+
+                label18.Text = label18.Text.Replace("{", "");
+                label18.Text = label18.Text.Replace("}", "");
+                label18.Text = label18.Text.Replace("Name", "");
+                label18.Text = label18.Text.Replace(":", "");
+                label18.Text = label18.Text.Replace(",", "");
+                label18.Text = label18.Text.Replace("_", "");
+                label18.Text = label18.Text.Replace(@"""", "");
+
                 label19.Text = File.ReadAllText(@"SMG.json");
+
+                label19.Text = label19.Text.Replace("{", "");
+                label19.Text = label19.Text.Replace("}", "");
+                label19.Text = label19.Text.Replace("Name", "");
+                label19.Text = label19.Text.Replace(":", "");
+                label19.Text = label19.Text.Replace(",", "");
+                label19.Text = label19.Text.Replace("_", "");
+                label19.Text = label19.Text.Replace(@"""", "");
+
                 label21.Text = File.ReadAllText(@"LMG.json");
+
+                label21.Text = label21.Text.Replace("{", "");
+                label21.Text = label21.Text.Replace("}", "");
+                label21.Text = label21.Text.Replace("Name", "");
+                label21.Text = label21.Text.Replace(":", "");
+                label21.Text = label21.Text.Replace(",", "");
+                label21.Text = label21.Text.Replace("_", "");
+                label21.Text = label21.Text.Replace(@"""", "");
+
                 label20.Text = File.ReadAllText(@"SG.json");
+
+                label20.Text = label20.Text.Replace("{", "");
+                label20.Text = label20.Text.Replace("}", "");
+                label20.Text = label20.Text.Replace("Name", "");
+                label20.Text = label20.Text.Replace(":", "");
+                label20.Text = label20.Text.Replace(",", "");
+                label20.Text = label20.Text.Replace("_", "");
+                label20.Text = label20.Text.Replace(@"""", "");
+
                 label22.Text = File.ReadAllText(@"SR.json");
 
+                label22.Text = label22.Text.Replace("{", "");
+                label22.Text = label22.Text.Replace("}", "");
+                label22.Text = label22.Text.Replace("Name", "");
+                label22.Text = label22.Text.Replace(":", "");
+                label22.Text = label22.Text.Replace(",", "");
+                label22.Text = label22.Text.Replace("_", "");
+                label22.Text = label22.Text.Replace(@"""", "");
+
                 label2.Text = File.ReadAllText(@"brl.json");
+
+                label2.Text = label2.Text.Replace("{", "");
+                label2.Text = label2.Text.Replace("}", "");
+                label2.Text = label2.Text.Replace("Name", "");
+                label2.Text = label2.Text.Replace(":", "");
+                label2.Text = label2.Text.Replace(",", "");
+                label2.Text = label2.Text.Replace("_", "");
+                label2.Text = label2.Text.Replace(@"""", "");
+
                 label3.Text = File.ReadAllText(@"hg.json");
+
+                label3.Text = label3.Text.Replace("{", "");
+                label3.Text = label3.Text.Replace("}", "");
+                label3.Text = label3.Text.Replace("Name", "");
+                label3.Text = label3.Text.Replace(":", "");
+                label3.Text = label3.Text.Replace(",", "");
+                label3.Text = label3.Text.Replace("_", "");
+                label3.Text = label3.Text.Replace(@"""", "");
+
                 label4.Text = File.ReadAllText(@"RC.json");
+
+                label4.Text = label4.Text.Replace("{", "");
+                label4.Text = label4.Text.Replace("}", "");
+                label4.Text = label4.Text.Replace("Name", "");
+                label4.Text = label4.Text.Replace(":", "");
+                label4.Text = label4.Text.Replace(",", "");
+                label4.Text = label4.Text.Replace("_", "");
+                label4.Text = label4.Text.Replace(@"""", "");
+
                 label5.Text = File.ReadAllText(@"stk.json");
+
+                label5.Text = label5.Text.Replace("{", "");
+                label5.Text = label5.Text.Replace("}", "");
+                label5.Text = label5.Text.Replace("Name", "");
+                label5.Text = label5.Text.Replace(":", "");
+                label5.Text = label5.Text.Replace(",", "");
+                label5.Text = label5.Text.Replace("_", "");
+                label5.Text = label5.Text.Replace(@"""", "");
+
                 label6.Text = File.ReadAllText(@"TP.json");
 
+                label6.Text = label6.Text.Replace("{", "");
+                label6.Text = label6.Text.Replace("}", "");
+                label6.Text = label6.Text.Replace("Name", "");
+                label6.Text = label6.Text.Replace(":", "");
+                label6.Text = label6.Text.Replace(",", "");
+                label6.Text = label6.Text.Replace("_", "");
+                label6.Text = label6.Text.Replace(@"""", "");
+
+
                 label7.Text = File.ReadAllText(@"muz.json");
+
+                label7.Text = label7.Text.Replace("{", "");
+                label7.Text = label7.Text.Replace("}", "");
+                label7.Text = label7.Text.Replace("Name", "");
+                label7.Text = label7.Text.Replace(":", "");
+                label7.Text = label7.Text.Replace(",", "");
+                label7.Text = label7.Text.Replace("_", "");
+                label7.Text = label7.Text.Replace(@"""", "");
+
                 label8.Text = File.ReadAllText(@"opt.json");
+
+                label8.Text = label8.Text.Replace("{", "");
+                label8.Text = label8.Text.Replace("}", "");
+                label8.Text = label8.Text.Replace("Name", "");
+                label8.Text = label8.Text.Replace(":", "");
+                label8.Text = label8.Text.Replace(",", "");
+                label8.Text = label8.Text.Replace("_", "");
+                label8.Text = label8.Text.Replace(@"""", "");
+
                 label9.Text = File.ReadAllText(@"srl.json");
+
+                label9.Text = label9.Text.Replace("{", "");
+                label9.Text = label9.Text.Replace("}", "");
+                label9.Text = label9.Text.Replace("Name", "");
+                label9.Text = label9.Text.Replace(":", "");
+                label9.Text = label9.Text.Replace(",", "");
+                label9.Text = label9.Text.Replace("_", "");
+                label9.Text = label9.Text.Replace(@"""", "");
+
                 label10.Text = File.ReadAllText(@"UB.json");
 
+                label10.Text = label10.Text.Replace("{", "");
+                label10.Text = label10.Text.Replace("}", "");
+                label10.Text = label10.Text.Replace("Name", "");
+                label10.Text = label10.Text.Replace(":", "");
+                label10.Text = label10.Text.Replace(",", "");
+                label10.Text = label10.Text.Replace("_", "");
+                label10.Text = label10.Text.Replace(@"""", "");
+
+
                 label11.Text = File.ReadAllText(@"auto.json");
+
+                label11.Text = label11.Text.Replace("{", "");
+                label11.Text = label11.Text.Replace("}", "");
+                label11.Text = label11.Text.Replace("Name", "");
+                label11.Text = label11.Text.Replace(":", "");
+                label11.Text = label11.Text.Replace(",", "");
+                label11.Text = label11.Text.Replace("_", "");
+                label11.Text = label11.Text.Replace(@"""", "");
+
                 label23.Text = File.ReadAllText(@"rev.json");
 
+                label23.Text = label23.Text.Replace("{", "");
+                label23.Text = label23.Text.Replace("}", "");
+                label23.Text = label23.Text.Replace("Name", "");
+                label23.Text = label23.Text.Replace(":", "");
+                label23.Text = label23.Text.Replace(",", "");
+                label23.Text = label23.Text.Replace("_", "");
+                label23.Text = label23.Text.Replace(@"""", "");
+
+
                 label12.Text = File.ReadAllText(@"frm.json");
+
+                label12.Text = label12.Text.Replace("{", "");
+                label12.Text = label12.Text.Replace("}", "");
+                label12.Text = label12.Text.Replace("Name", "");
+                label12.Text = label12.Text.Replace(":", "");
+                label12.Text = label12.Text.Replace(",", "");
+                label12.Text = label12.Text.Replace("_", "");
+                label12.Text = label12.Text.Replace(@"""", "");
+
                 label13.Text = File.ReadAllText(@"pbrl.json");
+
+                label13.Text = label13.Text.Replace("{", "");
+                label13.Text = label13.Text.Replace("}", "");
+                label13.Text = label13.Text.Replace("Name", "");
+                label13.Text = label13.Text.Replace(":", "");
+                label13.Text = label13.Text.Replace(",", "");
+                label13.Text = label13.Text.Replace("_", "");
+                label13.Text = label13.Text.Replace(@"""", "");
+
                 label14.Text = File.ReadAllText(@"slide.json");
+
+                label14.Text = label14.Text.Replace("{", "");
+                label14.Text = label14.Text.Replace("}", "");
+                label14.Text = label14.Text.Replace("Name", "");
+                label14.Text = label14.Text.Replace(":", "");
+                label14.Text = label14.Text.Replace(",", "");
+                label14.Text = label14.Text.Replace("_", "");
+                label14.Text = label14.Text.Replace(@"""", "");
+
                 label15.Text = File.ReadAllText(@"trg.json");
+
+                label15.Text = label15.Text.Replace("{", "");
+                label15.Text = label15.Text.Replace("}", "");
+                label15.Text = label15.Text.Replace("Name", "");
+                label15.Text = label15.Text.Replace(":", "");
+                label15.Text = label15.Text.Replace(",", "");
+                label15.Text = label15.Text.Replace("_", "");
+                label15.Text = label15.Text.Replace(@"""", "");
+
                 label16.Text = File.ReadAllText(@"pmzl.json");
+
+                label16.Text = label16.Text.Replace("{", "");
+                label16.Text = label16.Text.Replace("}", "");
+                label16.Text = label16.Text.Replace("Name", "");
+                label16.Text = label16.Text.Replace(":", "");
+                label16.Text = label16.Text.Replace(",", "");
+                label16.Text = label16.Text.Replace("_", "");
+                label16.Text = label16.Text.Replace(@"""", "");
+
                 label17.Text = File.ReadAllText(@"rlM.json");
+
+                label17.Text = label17.Text.Replace("{", "");
+                label17.Text = label17.Text.Replace("}", "");
+                label17.Text = label17.Text.Replace("Name", "");
+                label17.Text = label17.Text.Replace(":", "");
+                label17.Text = label17.Text.Replace(",", "");
+                label17.Text = label17.Text.Replace("_", "");
+                label17.Text = label17.Text.Replace(@"""", "");
+
             }
 
             if (label1.Text == "label1")
             {
-                label1.Text = " ";
+                label1.Text = "";
             }
 
             if (label2.Text == "label2")
             {
-                label2.Text = " ";
+                label2.Text = "";
             }
 
             if (label3.Text == "label3")
             {
-                label3.Text = " ";
+                label3.Text = "";
             }
 
             if (label4.Text == "label4")
             {
-                label4.Text = " ";
+                label4.Text = "";
             }
 
             if (label5.Text == "label5")
             {
-                label5.Text = " ";
+                label5.Text = "";
             }
 
             if (label6.Text == "label6")
             {
-                label6.Text = " ";
+                label6.Text = "";
             }
 
             if (label7.Text == "label7")
             {
-                label7.Text = " ";
+                label7.Text = "";
             }
 
             if (label8.Text == "label8")
             {
-                label8.Text = " ";
+                label8.Text = "";
             }
 
             if (label9.Text == "label9")
             {
-                label9.Text = " ";
+                label9.Text = "";
             }
 
             if (label10.Text == "label10")
             {
-                label10.Text = " ";
+                label10.Text = "";
             }
 
             if (label11.Text == "label11")
             {
-                label11.Text = " ";
+                label11.Text = "";
             }
 
             if (label12.Text == "label12")
             {
-                label12.Text = " ";
+                label12.Text = "";
             }
 
             if (label13.Text == "label13")
             {
-                label13.Text = " ";
+                label13.Text = "";
             }
 
             if (label14.Text == "label14")
             {
-                label14.Text = " ";
+                label14.Text = "";
             }
 
             if (label15.Text == "label15")
             {
-                label15.Text = " ";
+                label15.Text = "";
             }
 
             if (label16.Text == "label16")
             {
-                label16.Text = " ";
+                label16.Text = "";
             }
 
             if (label17.Text == "label17")
             {
-                label17.Text = " ";
+                label17.Text = "";
             }
 
             if (label18.Text == "label18")
             {
-                label18.Text = " ";
+                label18.Text = "";
             }
 
             if (label19.Text == "label19")
             {
-                label19.Text = " ";
+                label19.Text = "";
             }
 
             if (label20.Text == "label20")
             {
-                label20.Text = " ";
+                label20.Text = "";
             }
 
             if (label21.Text == "label21")
             {
-                label21.Text = " ";
+                label21.Text = "";
             }
 
             if (label22.Text == "label22")
             {
-                label22.Text = " ";
+                label22.Text = "";
             }
 
             if (label23.Text == "label23")
             {
-                label23.Text = " ";
+                label23.Text = "";
             }
 
 
@@ -276,10 +489,8 @@ namespace TestForms
 
         public void button1_Click(object sender, EventArgs e)
         {
-           
             Classes.Weapons.AssaultRifles assaultRifles = new Classes.Weapons.AssaultRifles();
-            assaultRifles.Name = Form2.SetValueForRifle;
-
+            assaultRifles.Name = Form2.SetValueForRifle; ;
 
             Classes.Weapons.BattleRifles battleRifles = new Classes.Weapons.BattleRifles();
             battleRifles.Name = Form2.SetValueForRifle2;
@@ -352,162 +563,51 @@ namespace TestForms
             Classes.SideArmAttachments.Railmount railmount = new Classes.SideArmAttachments.Railmount();
             railmount.Name = Form8.SetValueForRifle2;
 
-            File.WriteAllText(@"AR.json", JsonConvert.SerializeObject(assaultRifles));
+            File.WriteAllText(@"AR.txt", JsonConvert.SerializeObject(label1.Text));
 
-            File.WriteAllText(@"BR.json", JsonConvert.SerializeObject(battleRifles));
-            using (StreamWriter file = File.CreateText(@"BR.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, battleRifles);
-            }
+            File.WriteAllText(@"BR.json", JsonConvert.SerializeObject(label18.Text));
 
-            File.WriteAllText(@"SMG.json", JsonConvert.SerializeObject(sMGs));
-            using (StreamWriter file = File.CreateText(@"SMG.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, sMGs);
-            }
+            File.WriteAllText(@"SMG.json", JsonConvert.SerializeObject(label19.Text));
 
-            File.WriteAllText(@"LMG.json", JsonConvert.SerializeObject(lMGs));
-            using (StreamWriter file = File.CreateText(@"LMG.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, lMGs);
-            }
+            File.WriteAllText(@"LMG.json", JsonConvert.SerializeObject(label21.Text));
 
-            File.WriteAllText(@"SG.json", JsonConvert.SerializeObject(shotguns));
-            using (StreamWriter file = File.CreateText(@"SG.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, shotguns);
-            }
+            File.WriteAllText(@"SG.json", JsonConvert.SerializeObject(label20.Text));
 
-            File.WriteAllText(@"SR.json", JsonConvert.SerializeObject(sniperRifles));
-            using (StreamWriter file = File.CreateText(@"SR.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, sniperRifles);
-            }
+            File.WriteAllText(@"SR.json", JsonConvert.SerializeObject(label22.Text));
 
-            File.WriteAllText(@"brl.json", JsonConvert.SerializeObject(barrel));
-            using (StreamWriter file = File.CreateText(@"brl.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, barrel);
-            }
+            File.WriteAllText(@"brl.json", JsonConvert.SerializeObject(label2.Text));
 
-            File.WriteAllText(@"hg.json", JsonConvert.SerializeObject(handguard));
-            using (StreamWriter file = File.CreateText(@"hg.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, handguard);
-            }
+            File.WriteAllText(@"hg.json", JsonConvert.SerializeObject(label3.Text));
 
-            File.WriteAllText(@"RC.json", JsonConvert.SerializeObject(reciver));
-            using (StreamWriter file = File.CreateText(@"RC.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, reciver);
-            }
+            File.WriteAllText(@"RC.json", JsonConvert.SerializeObject(label4.Text));
 
-            File.WriteAllText(@"stk.json", JsonConvert.SerializeObject(stock));
-            using (StreamWriter file = File.CreateText(@"stk.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, stock);
-            }
+            File.WriteAllText(@"stk.json", JsonConvert.SerializeObject(label5.Text));
 
-            File.WriteAllText(@"TP.json", JsonConvert.SerializeObject(topPiece));
-            using (StreamWriter file = File.CreateText(@"TP.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, topPiece);
-            }
+            File.WriteAllText(@"TP.json", JsonConvert.SerializeObject(label6.Text));
 
-            File.WriteAllText(@"muz.json", JsonConvert.SerializeObject(muzzle));
-            using (StreamWriter file = File.CreateText(@"muz.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, muzzle);
-            }
+            File.WriteAllText(@"muz.json", JsonConvert.SerializeObject(label7.Text));
 
-            File.WriteAllText(@"opt.json", JsonConvert.SerializeObject(optic));
-            using (StreamWriter file = File.CreateText(@"opt.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, optic);
-            }
+            File.WriteAllText(@"opt.json", JsonConvert.SerializeObject(label8.Text));
 
-            File.WriteAllText(@"srl.json", JsonConvert.SerializeObject(sideRail));
-            using (StreamWriter file = File.CreateText(@"srl.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, sideRail);
-            }
+            File.WriteAllText(@"srl.json", JsonConvert.SerializeObject(label9.Text));
 
-            File.WriteAllText(@"UB.json", JsonConvert.SerializeObject(underbarrel));
-            using (StreamWriter file = File.CreateText(@"UB.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, underbarrel);
-            }
+            File.WriteAllText(@"UB.json", JsonConvert.SerializeObject(label10.Text));
 
-            File.WriteAllText(@"auto.json", JsonConvert.SerializeObject(automatics));
-            using (StreamWriter file = File.CreateText(@"auto.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, automatics);
-            }
+            File.WriteAllText(@"auto.json", JsonConvert.SerializeObject(label11.Text));
 
-            File.WriteAllText(@"rev.json", JsonConvert.SerializeObject(revolvers));
-            using (StreamWriter file = File.CreateText(@"rev.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, revolvers);
-            }
+            File.WriteAllText(@"rev.json", JsonConvert.SerializeObject(label23.Text));
 
-            File.WriteAllText(@"frm.json", JsonConvert.SerializeObject(frame));
-            using (StreamWriter file = File.CreateText(@"frm.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, frame);
-            }
+            File.WriteAllText(@"frm.json", JsonConvert.SerializeObject(label12.Text));
 
-            File.WriteAllText(@"pbrl.json", JsonConvert.SerializeObject(pBarrel));
-            using (StreamWriter file = File.CreateText(@"pbrl.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, pBarrel);
-            }
+            File.WriteAllText(@"pbrl.json", JsonConvert.SerializeObject(label13.Text));
 
-            File.WriteAllText(@"slide.json", JsonConvert.SerializeObject(slide));
-            using (StreamWriter file = File.CreateText(@"slide.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, slide);
-            }
+            File.WriteAllText(@"slide.json", JsonConvert.SerializeObject(label14.Text));
 
-            File.WriteAllText(@"trg.json", JsonConvert.SerializeObject(trigger));
-            using (StreamWriter file = File.CreateText(@"trg.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, trigger);
-            }
+            File.WriteAllText(@"trg.json", JsonConvert.SerializeObject(label15.Text));
 
-            File.WriteAllText(@"pmzl.json", JsonConvert.SerializeObject(pMuzzle));
-            using (StreamWriter file = File.CreateText(@"pmzl.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, pMuzzle);
-            }
+            File.WriteAllText(@"pmzl.json", JsonConvert.SerializeObject(label16.Text));
 
-            File.WriteAllText(@"rlM.json", JsonConvert.SerializeObject(railmount));
-            using (StreamWriter file = File.CreateText(@"rlM.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, railmount);
-            }
-
+            File.WriteAllText(@"rlM.json", JsonConvert.SerializeObject(label17.Text));
 
 
 

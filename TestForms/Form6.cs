@@ -16,8 +16,8 @@ namespace TestForms
 {
     public partial class Form6 : Form
     {
-        public static string SetValueForRifle = " \n";
-        public static string SetValueForRifle2 = " \n";
+        public static string SetValueForRifle = "";
+        public static string SetValueForRifle2 = "";
 
         public bool AutoLoader2 = false;
         public bool SixGun2 = false;
